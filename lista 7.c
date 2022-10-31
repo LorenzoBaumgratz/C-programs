@@ -1,31 +1,21 @@
 #include <stdio.h>
+#include <time.h>
 
 int main(){
-	
- int n[10],i,j;
- int a[10],b[10]c[10];
- int k=0;
- 
- for(i=0;i<10;i++){
- 	printf("n[%d] = ",i);
- 	scanf("%d", &n[i]);
- 	a[i]=n[i];
- }
-for(i=0;i<10;i++){
-	for(j=0;j<10;j++){
-		if(n[i]==a[j])
-			b[k]=n[i];
-			
-			k++;
-	 		for(k=0;k<10;k++){
-	 			if(b[k]!=)
-	 				
-			 }
-	 	a[i]=n[i];
-		}
- }
-
- 	
- 
-	return 0;
+int som=0;
+int i,j,n,med;
+int v[10]={1,2,3,4,5,6,7,8,9,10}, m[10]={0,0,0,0,0,0,0,0,0,0};
+srand(time(NULL));
+for(i=0; i<100; i++){
+n=1+rand()%10;
+som+=n;
+for(j=0;j<10;j++){
+if(n==v[j])
+m[j]++;
+}
+}
+med=som/100;
+printf("media :%d\n", med);
+for(i=0; i<10;i++)
+printf("%d: %d\n", i+1,m[i]);
 }

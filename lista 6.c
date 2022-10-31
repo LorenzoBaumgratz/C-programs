@@ -1,25 +1,26 @@
 #include <stdio.h>
-int count(int*v,int size,int k);
+#include <math.h>
+int k=1;
+int x;
+void contador();
 int main(){
-	
-	int a[10],i,k;
-	
-	for(i=0;i<10;i++){
-		printf("a[%d]= ",i);
-		scanf("%d", &a[i]);
-	}
-	printf("Verificar numero: ");
-	scanf("%d", &k);
-	
-	printf("O numero %d apareceu %d vezes ", k,count(a,10,k));
+
+    while(k!=0){
+    scanf("%d", &k);
+    contador();
+    }
+return 0;
 }
-int count(int*v,int size,int k){
-	int i;
-	int x=0;
-	for(i=0;i<size;i++){
-		if(*(v+i)==k)
-		x++;
-	}
-	
-	return x;
+
+void contador(){
+static int x=5;
+
+if(x==0)
+x=5;
+if(x>0)
+x--;
+
+
+printf("%d\n", x);
+return;
 }
